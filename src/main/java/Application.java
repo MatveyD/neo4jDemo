@@ -19,7 +19,7 @@ public class Application {
             String label ="Place";
             String query ="MATCH (a:"+label+") WHERE a.from = {from} RETURN a.name AS name, a.from AS title";
             // tag::minimal-example[]
-            Driver driver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", "password"));
+            Driver driver = GraphDatabase.driver("bolt://localhost:7687", AuthTokens.basic("neo4j", ""));
 
             try (Session session = driver.session()) {
 
